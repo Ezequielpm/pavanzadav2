@@ -10,6 +10,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
 import Modelo.Estudiante;
+import Vista.MenuEscuela;
 import java.util.ArrayList;
 
 /**
@@ -18,22 +19,23 @@ import java.util.ArrayList;
  */                                     //implements son para heredar interfaces, los metodos son abstractos(vacios, no tienen cuerpo)
 public class ControladorEstudianteAlta implements ActionListener {
 
-    EstudianteConsulta objConsulta;
+    //EstudianteConsulta objConsulta;
     EstudianteAlta objEstudianteAlta;
     Validador objValidador;
     operacionEstudianteLista objOpListaEstudiante;
     Estudiante objEstudiante;
-    ArrayList<Estudiante> listaEst;
+    MenuEscuela objMenuEscuela;
+   // ArrayList<Estudiante> listaEst;   no va aqui
 
     //recibe como parametro estudiante alta:)
     public ControladorEstudianteAlta(EstudianteAlta objEstudianteAlta) {
-        listaEst = new ArrayList();
+       //listaEst = new ArrayList();
         objValidador = new Validador();
         
         this.objEstudianteAlta = objEstudianteAlta;
         
         objEstudianteAlta.jButton1.addActionListener(this);
-        objEstudianteAlta.jButton2.addActionListener(this);
+        //objEstudianteAlta.jButton2.addActionListener(this);  esto ya no va porque es del boton de consulta
         objOpListaEstudiante = new operacionEstudianteLista();
         /*objEstudianteAlta.jTextField1.addActionListener(this);
         objEstudianteAlta.jTextField2.addActionListener(this);
@@ -45,20 +47,38 @@ public class ControladorEstudianteAlta implements ActionListener {
     @Override
     public void actionPerformed(ActionEvent e) {
         if (e.getSource() == objEstudianteAlta.jButton1) {
-            System.out.println("Se ha guardado correctamente en la tabla");
+            System.out.println("Escuchador del boton");
+            if (!this.objValidador.validaCajaTextoEntero(objEstudianteAlta.getjTextField1())) {
+                return;
+            }
+            else if(!this.objValidador.validaCajaTextoCadena(objEstudianteAlta.getjTextField2())){
+                return;
+            }
+            else if(!this.objValidador.validaCajaTextoCadena(objEstudianteAlta.getjTextField3())){
+                return;
+            }
+            else if(!this.objValidador.validaCajaTextoCadena(objEstudianteAlta.getjTextField4())){
+                return;
+            }
+            else if(!this.objValidador.validaCajaTextoEnteroEdad(objEstudianteAlta.getjTextField5())){
+                return;
+            }
+            
+            
+            
             
             objEstudiante = new Estudiante();
-            objEstudiante.setMatricula(Integer.parseInt(objEstudianteAlta.jTextField1.getText()));
-            objEstudiante.setNombre(objEstudianteAlta.jTextField2.getText());
-            objEstudiante.setApPaterno(objEstudianteAlta.jTextField3.getText());
-            objEstudiante.setApMaterno(objEstudianteAlta.jTextField4.getText());
-            objEstudiante.setEdad(Integer.parseInt(objEstudianteAlta.jTextField5.getText()));
+            objEstudiante.setMatricula(Integer.parseInt(objEstudianteAlta.getjTextField1().getText()));
+            objEstudiante.setNombre(objEstudianteAlta.getjTextField2().getText());
+            objEstudiante.setApPaterno(objEstudianteAlta.getjTextField3().getText());
+            objEstudiante.setApMaterno(objEstudianteAlta.getjTextField4().getText());
+            objEstudiante.setEdad(Integer.parseInt(objEstudianteAlta.getjTextField5().getText()));
             
             objOpListaEstudiante.setObjEstudiante(objEstudiante);
-            listaEst.add(objEstudiante);
+            //listaEst.add(objEstudiante);
             objOpListaEstudiante.create();
             limpiar();
-            imprimirLista();
+            //imprimirLista();
 
             /*
             System.out.println("Resultado tamaño: "+this.jTextField1.getText().length());//checa de que tamaño es el string
@@ -92,9 +112,15 @@ public class ControladorEstudianteAlta implements ActionListener {
         //limpiar();
         //imprimirLista();
              */
+             System.out.println("Se ha guardado correctamente en la tabla");
+             return;
+        }
+        if(e.getSource()==this.objEstudianteAlta.botonAltaRegresar){
+            
+            return;
         }
         //boton de consultar
-        if (e.getSource() == objEstudianteAlta.jButton2) {
+       /* if (e.getSource() == objEstudianteAlta.jButton2) {
             
                 if(objConsulta == null){
                 objConsulta = new EstudianteConsulta(this.objOpListaEstudiante);
@@ -106,8 +132,8 @@ public class ControladorEstudianteAlta implements ActionListener {
                 }
 
             /*EstudianteConsulta objConsulta =  new EstudianteConsulta(this.objEstudianteAlta);
-            objConsulta.setzi*/
-        }
+            objConsulta.setzi
+        }*/
         
     }
 
@@ -119,18 +145,19 @@ public class ControladorEstudianteAlta implements ActionListener {
         objEstudianteAlta.jTextField5.setText("");
     }
     
-    public void imprimirLista() {
-        Estudiante objAux;
-        for (int i = 0; i < listaEst.size(); i++) {
-            objAux = listaEst.get(i);
-            System.out.println("Valores del objeto" + (i + 1) + ":");
-            System.out.println("Matricula:" + objAux.getMatricula());
-            System.out.println("Nombre:" + objAux.getNombre());
-            System.out.println("Apellido Paterno:" + objAux.getApPaterno());
-            System.out.println("Apellido Materno:" + objAux.getApMaterno());
-            System.out.println("Edad:" + objAux.getEdad());
-        }
-    }
+ 
+//    public void imprimirLista() {
+//        Estudiante objAux;
+//        for (int i = 0; i < listaEst.size(); i++) {
+//            objAux = listaEst.get(i);
+//            System.out.println("Valores del objeto" + (i + 1) + ":");
+//            System.out.println("Matricula:" + objAux.getMatricula());
+//            System.out.println("Nombre:" + objAux.getNombre());
+//            System.out.println("Apellido Paterno:" + objAux.getApPaterno());
+//            System.out.println("Apellido Materno:" + objAux.getApMaterno());
+//            System.out.println("Edad:" + objAux.getEdad());
+//        }
+//    }
 
     /* public void validaCamposTextos2() {
         
@@ -163,4 +190,15 @@ public class ControladorEstudianteAlta implements ActionListener {
     public javax.swing.JTextField jTextField3;
     public javax.swing.JTextField jTextField4;
     public javax.swing.JTextField jTextField5;*/
+
+    public MenuEscuela getObjMenuEscuela() {
+        return objMenuEscuela;
+    }
+
+    public void setObjMenuEscuela(MenuEscuela objMenuEscuela) {
+        this.objMenuEscuela = objMenuEscuela;
+    }
+    
+    
+    
 }

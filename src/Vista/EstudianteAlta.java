@@ -10,6 +10,7 @@ import Modelo.Estudiante;
 import Controlador.Validador;
 import Controlador.operacionEstudianteLista;
 import javax.swing.JOptionPane;
+import javax.swing.JTextField;
 
 /**
  *
@@ -28,9 +29,9 @@ public class EstudianteAlta extends javax.swing.JFrame {
         initComponents();
         objControlador = new ControladorEstudianteAlta(this);
         //objValidador = new Validador();
-        objEstudiante = new Estudiante();// aqui estaba instanciado al principio
+        //objEstudiante = new Estudiante();// aqui estaba instanciado al principio
         //objOpeEstudianteLista = new operacionEstudianteLista();
-        listaEst = new ArrayList();
+        //listaEst = new ArrayList();
 
     }
 
@@ -56,8 +57,8 @@ public class EstudianteAlta extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jTextField5 = new javax.swing.JTextField();
         jLabel6 = new javax.swing.JLabel();
-        jButton2 = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
+        botonAltaRegresar = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -95,9 +96,9 @@ public class EstudianteAlta extends javax.swing.JFrame {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Edad");
 
-        jButton2.setText("Consulta");
-
         jLabel7.setText("jLabel7");
+
+        botonAltaRegresar.setText("Regresar");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -107,8 +108,8 @@ public class EstudianteAlta extends javax.swing.JFrame {
                 .addGap(75, 75, 75)
                 .addComponent(jButton1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2)
-                .addGap(53, 53, 53))
+                .addComponent(botonAltaRegresar)
+                .addGap(64, 64, 64))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addGap(15, 15, 15)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -165,8 +166,8 @@ public class EstudianteAlta extends javax.swing.JFrame {
                     .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 40, Short.MAX_VALUE)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton2)
-                    .addComponent(jButton1))
+                    .addComponent(jButton1)
+                    .addComponent(botonAltaRegresar))
                 .addGap(43, 43, 43))
         );
 
@@ -296,9 +297,32 @@ public class EstudianteAlta extends javax.swing.JFrame {
         });
     }
 
+    public JTextField getjTextField1() {
+        return jTextField1;
+    }
+
+    public JTextField getjTextField2() {
+        return jTextField2;
+    }
+
+    public JTextField getjTextField3() {
+        return jTextField3;
+    }
+
+    public JTextField getjTextField4() {
+        return jTextField4;
+    }
+
+    public JTextField getjTextField5() {
+        return jTextField5;
+    }
+    
+    
+    
+
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    public javax.swing.JButton botonAltaRegresar;
     public javax.swing.JButton jButton1;
-    public javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -314,3 +338,6 @@ public class EstudianteAlta extends javax.swing.JFrame {
     public javax.swing.JTextField jTextField5;
     // End of variables declaration//GEN-END:variables
 }
+
+
+

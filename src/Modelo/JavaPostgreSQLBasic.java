@@ -39,7 +39,7 @@ public class JavaPostgreSQLBasic {
             // Conectamos con la base de datos
             connection = DriverManager.getConnection(
                     "jdbc:postgresql://127.0.0.1/postgres",
-                    "postgres", "UNACH2024");
+                    "postgres", "ezequielpm123");
  
             boolean valid = connection.isValid(50000);
             System.out.println(valid ? "TEST OK" : "TEST FAIL");

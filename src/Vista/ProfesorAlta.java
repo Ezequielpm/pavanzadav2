@@ -175,19 +175,19 @@ public class ProfesorAlta extends javax.swing.JFrame {
 
     public void validaCamposTextos2() {
 
-        if (!objValidador.validaCajatextoEntero(jTextField1)) {
+        if (!objValidador.validaCajaTextoEntero(jTextField1)) {
             return;
         }
-        if (!objValidador.validaCajatextoCadena(jTextField2)) {
+        if (!objValidador.validaCajaTextoCadena(jTextField2)) {
             return;
         }
-        if (!objValidador.validaCajatextoCadena(jTextField3)) {
+        if (!objValidador.validaCajaTextoCadena(jTextField3)) {
             return;
         }
-        if (!objValidador.validaCajatextoCadena(jTextField4)) {
+        if (!objValidador.validaCajaTextoCadena(jTextField4)) {
             return;
         }
-        if (!objValidador.validaCajatextoEntero(jTextField5)) {
+        if (!objValidador.validaCajaTextoEnteroEdad(jTextField5)) {
             return;
         }
 
