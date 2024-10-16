@@ -23,7 +23,7 @@ public class JavaPostgreSQL {
      * We establish the connection with the database <b>customerdb</b>.
      * Establecemos la conexión con la base de datos <b>customerdb</b>.
      */
-    Connection connection = null;
+    public Connection connection = null;
     public Statement stmt = null;
 
     public void connectDatabase() {
@@ -38,7 +38,7 @@ public class JavaPostgreSQL {
             // Database connect
             // Conectamos con la base de datos
             connection = DriverManager.getConnection(
-                    "jdbc:postgresql://127.0.0.1/java3g",
+                    "jdbc:postgresql://127.0.0.1/control_escolar",
                     "postgres", "ezequielpm123");
             stmt = connection.createStatement();
 

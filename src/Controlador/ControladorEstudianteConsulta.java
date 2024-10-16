@@ -8,6 +8,8 @@ import Modelo.Estudiante;
 import Vista.EstudianteConsulta;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import javax.swing.table.DefaultTableModel;
 
 /**
  *
@@ -29,7 +31,7 @@ public class ControladorEstudianteConsulta implements ActionListener {
 
         
         objBDEstudiante = new OperacionesBDEstudiante();
-       // llenado();
+        llenado();
     }
 
     @Override
@@ -42,6 +44,17 @@ public class ControladorEstudianteConsulta implements ActionListener {
             DefaultTableModel objModeloTabla = (DefaultTableModel)this.jTable1.getModel();
         objModeloTabla.addRow(new Object[]{"1","1","1","1"});
              */
+        }
+    }
+    
+    public void llenado(){
+        DefaultTableModel modelo = (DefaultTableModel)this.ObjEstudianteConsulta.jTable1.getModel();
+        modelo.setRowCount(0);
+        ArrayList<Estudiante> objListaEstudianteLocal =  objBDEstudiante.read();
+        
+        for(int i=0;i<objListaEstudianteLocal.size(); i++){
+            modelo.addRow(new Object[]{objListaEstudianteLocal.get(i).getMatricula(), objListaEstudianteLocal.get(i).getNombre(),
+                objListaEstudianteLocal.get(i).getApPaterno(),objListaEstudianteLocal.get(i).getApMaterno(),objListaEstudianteLocal.get(i).getEdad()});
         }
     }
 
