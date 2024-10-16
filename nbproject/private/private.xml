@@ -3,11 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/angel/OneDrive/Documentos/NetBeansProjects/Java3G/src/Controlador/ControladorProfesorAlta.java</file>
-            <file>file:/C:/Users/angel/OneDrive/Documentos/NetBeansProjects/Java3G/src/Controlador/operacionEstudianteLista.java</file>
-            <file>file:/C:/Users/angel/OneDrive/Documentos/NetBeansProjects/Java3G/src/Controlador/ControladorEstudianteAlta.java</file>
-            <file>file:/C:/Users/angel/OneDrive/Documentos/NetBeansProjects/Java3G/src/Vista/EstudianteAlta.java</file>
-            <file>file:/C:/Users/angel/OneDrive/Documentos/NetBeansProjects/Java3G/src/Vista/ProfesorAlta.java</file>
+            <file>file:/Users/ezequielpena/NetBeansProjects/pavanzadav2/src/Vista/EstudianteConsulta.java</file>
+            <file>file:/Users/ezequielpena/NetBeansProjects/pavanzadav2/src/Modelo/Estudiante.java</file>
+            <file>file:/Users/ezequielpena/NetBeansProjects/pavanzadav2/src/Vista/MenuEscuela.java</file>
+            <file>file:/Users/ezequielpena/NetBeansProjects/pavanzadav2/src/Vista/EstudianteAlta.java</file>
+            <file>file:/Users/ezequielpena/NetBeansProjects/pavanzadav2/src/java3g/Java3G.java</file>
+            <file>file:/Users/ezequielpena/NetBeansProjects/pavanzadav2/src/Modelo/JavaPostgreSQL.java</file>
+            <file>file:/Users/ezequielpena/NetBeansProjects/pavanzadav2/src/Controlador/ControladorMenuEscuela.java</file>
+            <file>file:/Users/ezequielpena/NetBeansProjects/pavanzadav2/src/Vista/ProfesorAlta.java</file>
+            <file>file:/Users/ezequielpena/NetBeansProjects/pavanzadav2/src/Controlador/OperacionesBDEstudiante.java</file>
+            <file>file:/Users/ezequielpena/NetBeansProjects/pavanzadav2/src/Controlador/ControladorEstudianteAlta.java</file>
+            <file>file:/Users/ezequielpena/NetBeansProjects/pavanzadav2/src/Controlador/Validador.java</file>
+            <file>file:/Users/ezequielpena/NetBeansProjects/pavanzadav2/src/Controlador/OperacionesProfesorLista.java</file>
+            <file>file:/Users/ezequielpena/NetBeansProjects/pavanzadav2/src/Controlador/ControladorEstudianteConsulta.java</file>
         </group>
     </open-files>
 </project-private>

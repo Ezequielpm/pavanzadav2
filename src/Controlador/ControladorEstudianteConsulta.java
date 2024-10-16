@@ -18,12 +18,18 @@ public class ControladorEstudianteConsulta implements ActionListener {
     EstudianteConsulta ObjEstudianteConsulta;
     Estudiante objEstudiante;
 
+    
+    OperacionesBDEstudiante objBDEstudiante;
+    
     public ControladorEstudianteConsulta(EstudianteConsulta ObjEstudianteConsulta) {
 
         this.ObjEstudianteConsulta = ObjEstudianteConsulta;
 
         ObjEstudianteConsulta.jButton1.addActionListener(this);
 
+        
+        objBDEstudiante = new OperacionesBDEstudiante();
+       // llenado();
     }
 
     @Override

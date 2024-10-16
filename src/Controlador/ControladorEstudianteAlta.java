@@ -25,6 +25,7 @@ public class ControladorEstudianteAlta implements ActionListener {
     operacionEstudianteLista objOpListaEstudiante;
     Estudiante objEstudiante;
     MenuEscuela objMenuEscuela;
+    OperacionesBDEstudiante objOperacionesBD;
    // ArrayList<Estudiante> listaEst;   no va aqui
 
     //recibe como parametro estudiante alta:)
@@ -42,6 +43,7 @@ public class ControladorEstudianteAlta implements ActionListener {
         objEstudianteAlta.jTextField3.addActionListener(this);
         objEstudianteAlta.jTextField4.addActionListener(this);
         objEstudianteAlta.jTextField5.addActionListener(this);*/
+        objOperacionesBD = new OperacionesBDEstudiante();
     }
     
     @Override
@@ -80,6 +82,8 @@ public class ControladorEstudianteAlta implements ActionListener {
             limpiar();
             //imprimirLista();
 
+            objOperacionesBD.setObjEstudiante(this.objEstudiante);
+            objOperacionesBD.create();
             /*
             System.out.println("Resultado tamaño: "+this.jTextField1.getText().length());//checa de que tamaño es el string
         System.out.println("Resultado Empty: "+this.jTextField1.getText().isEmpty()); //valida cualquier caracter (incluyendo esapcios, si hay espacios NO esta vacio)
